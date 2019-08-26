@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+/*coffeeventures.html modifications*//*also remember, css effects are universal, so if another 
+piece of code(ex-body) is the same, the css will also carry into that piece of code as well. keep in mind for the pages*/
+html{
+		background-image: url(coffeebeans.jpg);
+	background-repeat: no-repeat;
+  background-size: 100%;
+
+}
+body{
+	margin-left: auto;
+	margin-right: auto;
+		background: rgba(191, 64, 64, 0.35);
+	width: 100%;
+	
+}
+img#nav {
+	width: 5%;
+}
+nav.class {
+	display: block;
+	
+}
+ul.row {/* M5L03, will impact the website by allowing the website to be seen on a mobile phone. It compresses the navigation into the listing.*/
+          display: none;
+          position:absolute;
+          width: 100%;
+        
+          
+}
+          
+    :hover+ul.row, ul.row:hover {/*M5L04 helped to create a pulldown */
+        display: block;
+            
+        
+}
+
+figure, img#profile {
+	border: 2px solid black;
+}
+img#profile {
+	width: 100%;
+	-webkit-border-radius: 15px;
+-moz-border-radius: 15px;
+border-radius: 15px;
+margin-left: 20px;
+}
+figure {
+	background-color: rgba(255, 210, 77, 0.62);
+	-webkit-border-top-left-radius: 35px;
+-webkit-border-top-right-radius: 15px;
+-webkit-border-bottom-right-radius: 55px;
+-webkit-border-bottom-left-radius: 15px;
+-moz-border-radius-topleft: 35px;
+-moz-border-radius-topright: 15px;
+-moz-border-radius-bottomright: 55px;
+-moz-border-radius-bottomleft: 15px;
+border-top-left-radius: 35px;
+border-top-right-radius: 15px;
+border-bottom-right-radius: 55px;
+border-bottom-left-radius: 15px;
+}
+figcaption {
+	border-top: 2px solid black;
+}
+div.col-1-3 {
+width: 60%;
+}
+aside, div#Coffee{
+	color: orange;
+	
+	
+}
+
+h1{
+	text-align: center;
+}
+figure {
+	
+	
+	float: right;
+	margin-right: 20%;
+	position:relative;
+	
+	
+}
+img#profile {
+	width: 16%;
+}
+tr, td {
+	border: 2px solid black;
+}
+
+footer {
+	background-color: red;
+	width: 100%;
+	
+}
+
+/* ===============================
+   Mobile Styles: 0px to 640px 
+   ===============================
+*/
+@media only screen and (max-width: 480px) {
+	aside#pat,aside#IG {
+		display: none;
+	}
+}
