@@ -11,7 +11,7 @@ html{
 body{
 	margin-left: auto;
 	margin-right: auto;
-		background: rgba(191, 64, 64, 0.35);
+	
 	width: 100%;
 	
 }
@@ -45,10 +45,27 @@ nav.horizontal {
           width: 100%;
           position: relative;
 }
+/* unvisited link */
+a:link {
+  color: green;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: black;
+}
+
+/* selected link */
+a:active {
+  color: purple;
+}
 aside#Profile {
-		float: right;
-	clear: right;
-	width: 60%;
+border-top: 2px solid black;
 	/*
 		border: 2px solid black;
 		-webkit-border-top-left-radius: 35px;
@@ -64,17 +81,29 @@ border-top-right-radius: 15px;
 border-bottom-right-radius: 55px;
 border-bottom-left-radius: 15px;
 	background-color: rgba(255, 210, 77, 0.62);*/
-	  display: flex;
-  flex-wrap: wrap;
-    flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: flex-start;
-  position:relative;
- left: 270px;
- bottom: 97px;
+display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
 }
-
+aside#Profile > img{
+	
+	width: 5%;
+}
  img#profile {
 	border: 2px solid black;
 		width: 100%;
@@ -83,7 +112,10 @@ border-bottom-left-radius: 15px;
 border-radius: 15px;
 margin-left: 20px;
 }
-
+section#profile {
+margin-left: auto;
+margin-right: auto;
+}
 
 /*
 figure#coff {
@@ -209,14 +241,69 @@ footer {
 }
 
 /*runblog.html styles*/
-
+html#Brun {
+    background-image: url("runb.jpg");
+}
 
 /*coffblog.html styles*/
-
+html#Bcoff {
+    background-image: url("coffb.jpg");
+}
 /*About.html styles*/
+.horizontal {
+  overflow: hidden;
+  background-color: #333;
+}
 
+.horizontal a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
 
+.horizontal a:hover {
+  background-color: #ddd;
+  color: black;
+  /*
+  opacity: 0.45;*/
+}
 
+.horizontal a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+section#slideshow {
+float: left;
+clear: left;
+margin-right: 560px;
+}
+section#slideshow > img.mySlides {
+		border: 2px solid black;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+section#slideshow > button.display-left, button.display-right {
+	border: 2px solid black;
+}
+section#slideshow1 {
+float: right;
+clear: right;
+margin-left:800px;
+
+}/*Workin on buttons- myslide1 works on the top, but buttons dont work independtly*/
+section#slideshow1 > img.mySlides1 {
+		border: 2px solid black;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+}
+section#slideshow1 > button.display-left, button.display-right {
+	border: 2px solid black;
+}
 /* ===============================
    Mobile Styles: 0px to 769px 
    ===============================
@@ -232,7 +319,13 @@ footer {
 	}
 	img#nav {
 		width: 10%;
+		
 	}
+	a#icon {
+	display: block;
+	
+}
+
 }
 /* ===============================
    Tablet Styles: 481px to 769px 
